@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 int main () {
-	FILE *baban;
+	FILE *file;
 	
-	baban = fopen("carpimTablosu.txt","w");
+	file = fopen("timesTable.txt","w");
 	int i,j;
 	for (i=1; i<=10; i++) {
 		for (j=1; j<=10; j++) {
-			fprintf(baban,"%i x %i = %i\n",i,j,i*j);
+			fprintf(file,"%i x %i = %i\n",i,j,i*j);
 		}
-		fprintf(baban,"\n");
+		fprintf(file,"\n");
 	}
-	fclose(baban);
+	fclose(file);
 }
