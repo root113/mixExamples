@@ -12,8 +12,8 @@ const char* morseEncode(char x){
 			return "-...";
 		case 'C':
 		case 'c':
-		case 'Ç':
-		case 'ç':
+		case 'Ã‡':
+		case 'Ã§':
 			return "-.-.";
 		case 'D':
 		case 'd':
@@ -26,15 +26,11 @@ const char* morseEncode(char x){
 			return "..-.";
 		case 'G':
 		case 'g':
-		case 'Ð':
-		case 'ð':
 			return "--.";
 		case 'H':
 		case 'h':
 			return "....";
 		case 'I':
-		case 'ý':
-		case 'Ý':
 		case 'i':
 			return "..";
 		case 'J':
@@ -55,8 +51,8 @@ const char* morseEncode(char x){
 		case 'O':
 		case 'o':
 			return "---";
-		case 'Ö':
-		case 'ö':
+		case 'Ã–':
+		case 'Ã¶':
 			return "---.";
 		case 'P':
 		case 'p':
@@ -69,8 +65,6 @@ const char* morseEncode(char x){
 			return ".-.";
 		case 'S':
 		case 's':
-		case 'Þ':
-		case 'þ':
 			return "...";
 		case 'T':
 		case 't':
@@ -78,8 +72,8 @@ const char* morseEncode(char x){
 		case 'U':
 		case 'u':
 			return "..-";
-		case 'Ü':
-		case 'ü':
+		case 'Ãœ':
+		case 'Ã¼':
 			return "..--";
 		case 'V':
 		case 'v':
