@@ -3,12 +3,12 @@
 #include <string.h>
 #define SIZE 50
 
-struct event{
+typedef struct e{
 	char eventName[SIZE];
 	char reward[SIZE];
 	int lastDate;
 	int rotation;
-};
+} event;
 
 void eCalendar();
 void pFarm(event);
@@ -16,62 +16,62 @@ void pFarm(event);
 int main() {
 	
 	//Events' setups
-	struct event e1;
+	struct e e1;
 	strcpy(e1.eventName, "Emperor's Demise");
 	strcpy(e1.reward, "Emperor Palpatine");
 	e1.rotation = 72;
 	
-	struct event e2;
+	struct e e2;
 	strcpy(e2.eventName, "Grandmaster's Training");
 	strcpy(e2.reward, "Grandmaster Yoda");
 	e2.rotation = 67;
 	
-	struct event e3;
+	struct e e3;
 	strcpy(e3.eventName, "Luke Skywalker Hero's Journey");
 	strcpy(e3.reward, "Commander Luke Skywalker");
 	e3.rotation = 102;
 	
-	struct event e4;
+	struct e e4;
 	strcpy(e4.eventName, "Legend of the Old Republic");
 	strcpy(e4.reward, "Jedi Knight Revan");
 	e4.rotation = 89;
 	
-	struct event e5;
+	struct e e5;
 	strcpy(e5.eventName, "Scourge of the Old Republic");
 	strcpy(e5.reward, "Darth Revan");
 	e5.rotation = 80;
 	
-	struct event e6;
+	struct e e6;
 	strcpy(e6.eventName, "Pieces & Plans");
 	strcpy(e6.reward, "BB-8");
 	e6.rotation = 82;
 	
-	struct event e7;
+	struct e e7;
 	strcpy(e7.eventName, "Rey's Hero's Journey");
 	strcpy(e7.reward, "Rey (Jedi Training)");
 	e7.rotation = 97;
 	
-	struct event e8;
+	struct e e8;
 	strcpy(e8.eventName, "Contact Protocol");
 	strcpy(e8.reward, "C-3PO");
 	e8.rotation = 87;
 	
-	struct event e9;
+	struct e e9;
 	strcpy(e9.eventName, "Daring Droid");
 	strcpy(e9.reward, "R2-D2");
 	e9.rotation = 81;
 	
-	struct event e10;
+	struct e e10;
 	strcpy(e10.eventName, "Aggressive Negotiations");
 	strcpy(e10.reward, "Padme Amidala");
 	e10.rotation = 97;
 	
-	struct event e11;
+	struct e e11;
 	strcpy(e11.eventName, "Star Forge Showdown");
 	strcpy(e11.reward, "Darth Malak");
 	e11.rotation = 125;
 	
-	struct event e12;
+	struct e e12;
 	strcpy(e12.eventName, "One Famous Wookiee");
 	strcpy(e12.reward, "Chewbacca");
 	e12.rotation = 93;
@@ -79,6 +79,8 @@ int main() {
 	//Operations
 	unsigned int operation;
 	int loop;
+	int choise;
+	int op2;
 	
 	while(loop!=-1){
 		printf("1 - Event Calendar\n2 - Panic Farm\n");
@@ -91,14 +93,12 @@ int main() {
 				loop = -1;
 				break;
 			case 2:
-				int choise,op2;
-				
 				while(op2!=5){
 					printf("\nChoose an event below: \n"
 	       		   	   	       "1 - Emperor's Demise\n"
 		    	   	   	       "2 - Grandmaster's Training\n"
 		           	   	       "3 - Luke Skywalker Hero's Journey\n"
-		   		   	       "4 - Legend of the Old Republic\n"
+		   		   	           "4 - Legend of the Old Republic\n"
 		   		               "5 - Scourge of the Old Republic\n"
 		   	           	       "6 - Pieces & Plans\n"
 		     		  	       "7 - Rey's Hero's Journey\n"
@@ -106,7 +106,7 @@ int main() {
 		    	  	  	       "9 - Daring Droid\n"
 		    		 	       "10 - Aggressive Negotiations\n"
 		    		  	       "11 - Star Forge Showdown\n"
-		    	      		       "12 - One Famous Wookiee\n");
+		    	      		   "12 - One Famous Wookiee\n");
 		    	        printf("Choise: ");
 		    		scanf("%d",&choise);
 	
