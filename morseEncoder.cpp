@@ -97,7 +97,7 @@ const char* morseEncode(char x){
 
 void morseCode (char *p){
 	for(int i=0;p[i] != '\0';i++){
-		printf("%s/",morseEncode(p[i]));
+		printf("%s//",morseEncode(p[i]));
 	}
 }
 
