@@ -95,12 +95,12 @@ int main() {
 		scanf("%d",&operation);
 
 		printf("\nChoose an event below:\n"
-	       	   "1 - Emperor's Demise\n"
+	       	       "1 - Emperor's Demise\n"
    	   	       "2 - Grandmaster's Training\n"
 		       "3 - Luke Skywalker Hero's Journey\n"
-		   	   "4 - Legend of the Old Republic\n"
-               "5 - Scourge of the Old Republic\n"
-		   	   "6 - Pieces & Plans\n"
+		       "4 - Legend of the Old Republic\n"
+                       "5 - Scourge of the Old Republic\n"
+		       "6 - Pieces & Plans\n"
 		       "7 - Rey's Hero's Journey\n"
 		       "8 - Contact Protocol\n"
 		       "9 - Daring Droid\n"
@@ -112,48 +112,48 @@ int main() {
 	
 		switch(operation){
 			case 1:
-                switch(choise){
-                   	case 1:
-                   		eChecklist(e1);
-                   		break;
-                   	case 2:
-                   		eChecklist(e2);
-                   		break;
-                   	case 3:
-                   		eChecklist(e3);
-                   		break;
-                   	case 4:
-                   		eChecklist(e4);
-                   		break;
-                    case 5:
-                       	eChecklist(e5);
-                       	break;
-                    case 6:
-                       	eChecklist(e6);
-                       	break;
-                    case 7:
-                       	eChecklist(e7);
-                       	break;
-                    case 8:
-                       	eChecklist(e8);
-                       	break;
-                    case 9:
-                       	eChecklist(e9);
-                       	break;
-                    case 10:
-                       	eChecklist(e10);
-                       	break;
-                    case 11:
-                       	eChecklist(e11);
-                       	break;
-                    case 12:
-                       	eChecklist(e12);
-                       	break;
-                    default:
-                       	printf("\nInvalid choise! Retry again.\n");
-                       	loop = 0;
-                       	break;
-                }
+                		switch(choise){
+                   			case 1:
+                   				eChecklist(e1);
+                   				break;
+                   			case 2:
+                   				eChecklist(e2);
+                   				break;
+                   			case 3:
+                   				eChecklist(e3);
+                   				break;
+                   			case 4:
+                   				eChecklist(e4);
+                   				break;
+                   			case 5:
+                      		 		eChecklist(e5);
+                      		 		break;
+                  	        	case 6:
+                       				eChecklist(e6);
+                       				break;
+                   			case 7:
+                       				eChecklist(e7);
+                     		  		break;
+          		        	case 8:
+                       				eChecklist(e8);
+                       				break;
+                    			case 9:
+                       				eChecklist(e9);
+                       				break;
+                    			case 10:
+                       				eChecklist(e10);
+                       				break;
+                    			case 11:
+                       				eChecklist(e11);
+                       				break;
+                    			case 12:
+                       				eChecklist(e12);
+                       				break;
+                    			default:
+                       				printf("\nInvalid choise! Retry again.\n");
+                       				loop = 0;
+                       				break;
+                		}
 
 				//Checking nested switch-case statement's default case
 				if(loop==0)
