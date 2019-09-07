@@ -3,14 +3,21 @@
 #include <string.h>
 #define SIZE 50
 
+typedef struct rC{
+	char character[SIZE];
+	int reqGear;
+	int recGear;
+} req;
+
 typedef struct e{
 	char eventName[SIZE];
 	char reward[SIZE];
 	int lastDate;
 	int rotation;
+	req reqChars;
 } event;
 
-void eCalendar();
+void eChecklist(event);
 void pFarm(event);
 
 int main() {
@@ -80,104 +87,155 @@ int main() {
 	unsigned int operation;
 	int loop;
 	int choise;
-	int op2;
+	int op;
 	
 	while(loop!=-1){
-		printf("1 - Event Calendar\n2 - Panic Farm\n");
+		printf("\n1 - Event Checklist\n2 - Panic Farm\n");
 		printf("Choose operation: ");
 		scanf("%d",&operation);
+
+		printf("\nChoose an event below:\n"
+	       	   "1 - Emperor's Demise\n"
+   	   	       "2 - Grandmaster's Training\n"
+		       "3 - Luke Skywalker Hero's Journey\n"
+		   	   "4 - Legend of the Old Republic\n"
+               "5 - Scourge of the Old Republic\n"
+		   	   "6 - Pieces & Plans\n"
+		       "7 - Rey's Hero's Journey\n"
+		       "8 - Contact Protocol\n"
+		       "9 - Daring Droid\n"
+		       "10 - Aggressive Negotiations\n"
+		       "11 - Star Forge Showdown\n"
+		       "12 - One Famous Wookiee\n");
+		printf("Choise: ");
+		scanf("%d",&choise);
 	
 		switch(operation){
 			case 1:
-				eCalendar();
-				loop = -1;
+                switch(choise){
+                   	case 1:
+                   		eChecklist(e1);
+                   		break;
+                   	case 2:
+                   		eChecklist(e2);
+                   		break;
+                   	case 3:
+                   		eChecklist(e3);
+                   		break;
+                   	case 4:
+                   		eChecklist(e4);
+                   		break;
+                    case 5:
+                       	eChecklist(e5);
+                       	break;
+                    case 6:
+                       	eChecklist(e6);
+                       	break;
+                    case 7:
+                       	eChecklist(e7);
+                       	break;
+                    case 8:
+                       	eChecklist(e8);
+                       	break;
+                    case 9:
+                       	eChecklist(e9);
+                       	break;
+                    case 10:
+                       	eChecklist(e10);
+                       	break;
+                    case 11:
+                       	eChecklist(e11);
+                       	break;
+                    case 12:
+                       	eChecklist(e12);
+                       	break;
+                    default:
+                       	printf("\nInvalid choise! Retry again.\n");
+                       	loop = 0;
+                       	break;
+                }
+
+				//Checking nested switch-case statement's default case
+				if(loop==0)
+					loop = 0;
+				else
+					loop = -1;
 				break;
+
 			case 2:
-				while(op2!=5){
-					printf("\nChoose an event below: \n"
-	       		   	   	       "1 - Emperor's Demise\n"
-		    	   	   	       "2 - Grandmaster's Training\n"
-		           	   	       "3 - Luke Skywalker Hero's Journey\n"
-		   		   	           "4 - Legend of the Old Republic\n"
-		   		               "5 - Scourge of the Old Republic\n"
-		   	           	       "6 - Pieces & Plans\n"
-		     		  	       "7 - Rey's Hero's Journey\n"
-		    		 	       "8 - Contact Protocol\n"
-		    	  	  	       "9 - Daring Droid\n"
-		    		 	       "10 - Aggressive Negotiations\n"
-		    		  	       "11 - Star Forge Showdown\n"
-		    	      		   "12 - One Famous Wookiee\n");
-		    	        printf("Choise: ");
-		    		scanf("%d",&choise);
-	
-			 		switch(choise){
-						case 1:
-							pFarm(e1);
-							op2 = 5;
-							break;
-						case 2:
-							pFarm(e2);
-							op2 = 5;
-							break;
-						case 3:
-							pFarm(e3);
-							op2 = 5;
-							break;
-						case 4:
-							pFarm(e4);
-							op2 = 5;
-							break;
-						case 5:
-							pFarm(e5);
-							op2 = 5;
-							break;
-						case 6:
-							pFarm(e6);
-							op2 = 5;
-							break;
-						case 7:
-							pFarm(e7);
-							op2 = 5;
-							break;
-						case 8:
-							pFarm(e8);
-							op2 = 5;
-							break;
-						case 9:
-							pFarm(e9);
-							op2 = 5;
-							break;
-						case 10:
-							pFarm(e10);
-							op2 = 5;
-							break;
-						case 11:
-							pFarm(e11);
-							op2 = 5;
-							break;
-						case 12:
-							pFarm(e12);
-							op2 = 5;
-							break;
-						default:
-							printf("\nInvalid choise! Retry again.\n");
-							op2 = 6;
-							break;
-					}
+				switch(choise){
+					case 1:
+						pFarm(e1);
+						break;
+					case 2:
+						pFarm(e2);
+						break;
+					case 3:
+						pFarm(e3);
+						break;
+					case 4:
+						pFarm(e4);
+						break;
+					case 5:
+						pFarm(e5);
+						break;
+					case 6:
+						pFarm(e6);
+						break;
+					case 7:
+						pFarm(e7);
+						break;
+					case 8:
+						pFarm(e8);
+						break;
+					case 9:
+						pFarm(e9);
+						break;
+					case 10:
+						pFarm(e10);
+						break;
+					case 11:
+						pFarm(e11);
+						break;
+					case 12:
+						pFarm(e12);
+						break;
+					default:
+						printf("\nInvalid choise! Retry again.\n");
+						loop = 0;
+						break;
 				}
 				
-				loop = -1;
+				//Checking nested switch-case statement's default case
+				if(loop==0)
+					loop = 0;
+				else
+					loop = -1;
 				break;
+
 			default:
 				printf("\nInvalid choise! Retry again.\n");
 				loop = 0;
 				break;
 		}
+		printf("\nTo continue: 1\n"
+			   "Close the app: 0\n");
+		printf("Action: ");
+		scanf("%d",&op);
+		if(op==1)
+			loop = 0;
+		else if(op==0)
+			loop = -1;
+        else{
+        	printf("\nWrong choise! Application will be closed.\n\n");
+        	loop = -1;
+        }
+
 	}
 }
 
-void eCalendar(){
-	printf("\nWe are working on this new feature. Come back later!\n");
+void eChecklist(event e){
+	//Code
 }
 
 void pFarm(event e){
