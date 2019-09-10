@@ -257,12 +257,12 @@ int main() {
 		scanf("%d",&operation);
 
 		printf("\nChoose an event below:\n"
-	       	   "1 - Emperor's Demise\n"
+	       	       "1 - Emperor's Demise\n"
    	   	       "2 - Grandmaster's Training\n"
 		       "3 - Luke Skywalker Hero's Journey\n"
-		   	   "4 - Legend of the Old Republic\n"
-               "5 - Scourge of the Old Republic\n"
-		   	   "6 - Pieces & Plans\n"
+		       "4 - Legend of the Old Republic\n"
+                       "5 - Scourge of the Old Republic\n"
+		       "6 - Pieces & Plans\n"
 		       "7 - Rey's Hero's Journey\n"
 		       "8 - Contact Protocol\n"
 		       "9 - Daring Droid\n"
@@ -275,51 +275,51 @@ int main() {
 	
 		switch(operation){
 			case 1:
-                switch(choise){
-                   	case 1:
-                   		eChecklist(e1);
-                   		break;
-                   	case 2:
-                   		eChecklist(e2);
-                   		break;
-                   	case 3:
-                   		eChecklist(e3);
-                   		break;
-                   	case 4:
-                   		eChecklist(e4);
-                   		break;
-                    case 5:
-                       	eChecklist(e5);
-                       	break;
-                    case 6:
-                       	eChecklist(e6);
-                       	break;
-                    case 7:
-                       	eChecklist(e7);
-                       	break;
-                    case 8:
-                       	eChecklist(e8);
-                       	break;
-                    case 9:
-                       	eChecklist(e9);
-                       	break;
-                    case 10:
-                       	eChecklist(e10);
-                       	break;
-                    case 11:
-                       	eChecklist(e11);
-                       	break;
-                    case 12:
-                       	eChecklist(e12);
-                       	break;
-                    case 13:
-                    	eChecklist(e13);
-                    	break;
-                    default:
-                       	printf("\nInvalid choise! Retry again.\n");
-                       	loop = 0;
-                       	break;
-                }
+                		switch(choise){
+                   			case 1:
+                   				eChecklist(e1);
+                   				break;
+                   			case 2:
+                   				eChecklist(e2);
+                   				break;
+                   			case 3:
+                   				eChecklist(e3);
+                   				break;
+                   			case 4:
+                   				eChecklist(e4);
+                   				break;
+                    			case 5:
+                       				eChecklist(e5);
+                       				break;
+                    			case 6:
+                       				eChecklist(e6);
+                       				break;
+                    			case 7:
+                       				eChecklist(e7);
+                       				break;
+                    			case 8:
+                       				eChecklist(e8);
+                       				break;
+                    			case 9:
+                       				eChecklist(e9);
+                       				break;
+                    			case 10:
+                       				eChecklist(e10);
+                       				break;
+                    			case 11:
+                       				eChecklist(e11);
+                       				break;
+                    			case 12:
+                       				eChecklist(e12);
+                       				break;
+                    			case 13:
+                    				eChecklist(e13);
+                    				break;
+                    		default:
+                       			printf("\nInvalid choise! Retry again.\n");
+                       			loop = 0;
+                       			break;
+                		}
 
 				//Checking nested switch-case statement's default case
 				if(loop==0)
@@ -388,7 +388,7 @@ int main() {
 				break;
 		}
 		printf("\nTo continue: 1\n"
-			   "Close the app: 0\n");
+		       "Close the app: 0\n");
 		printf("Action: ");
 		scanf("%d",&op);
 		if(op==1){
@@ -397,10 +397,10 @@ int main() {
 		}
 		else if(op==0)
 			loop = -1;
-        else{
-        	printf("\nWrong choise! Application will be closed.\n\n");
-        	loop = -1;
-        }
+        	else{
+        		printf("\nWrong choise! Application will be closed.\n\n");
+        		loop = -1;
+        	}
 	}
 	
 	//Deletion of memory after it is used
@@ -422,10 +422,10 @@ int main() {
 void eChecklist(event e){
 
 	printf("\nEvent: %s\n"
-		   "Required Characters: %s, %s, %s, %s, %s\n"
-		   "Required Gear: Gear %d\n"
-		   "Recommended Gear: %d\n"
-		   "Reward: %s\n",e.eventName,
+	       "Required Characters: %s, %s, %s, %s, %s\n"
+	       "Required Gear: Gear %d\n"
+	       "Recommended Gear: %d\n"
+	       "Reward: %s\n",e.eventName,
 		   e.reqChars.character[0],e.reqChars.character[1],
 		   e.reqChars.character[2],e.reqChars.character[3],
 		   e.reqChars.character[4],e.reqChars.reqGear,
